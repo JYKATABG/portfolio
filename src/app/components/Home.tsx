@@ -85,19 +85,19 @@ export default function Home() {
                     variants={textVariants}
                     className="flex flex-col xl:gap-[1em] gap-[1.2em] items-center xl:items-start"
                 >
-                    <motion.h1 className="text-[1.5em] xl:text-[2em]" variants={textVariants}>
+                    <motion.h1 className="text-[1.2em] xl:text-[2em]" variants={textVariants}>
                         Hello, I'am
                     </motion.h1>
-                    <motion.span className="text-[1.5em] xl:text-[2.5em] font-bold" variants={textVariants}>
+                    <motion.span className="text-[1.2em] xl:text-[2.5em] font-bold" variants={textVariants}>
                         {text}
                         <Cursor />
                     </motion.span>
-                    <motion.ul className="flex flex-col gap-7 xl:text-xl text-md" variants={textVariants}>
+                    <motion.ul className="flex flex-col gap-5 xl:text-xl text-sm" variants={textVariants}>
                         <motion.li className="flex items-center gap-5" variants={textVariants}>
                             <FaLocationDot className="text-red-500 xl:text-3xl text-lg" />
                             Currently living in Bulgaria
                         </motion.li>
-                        <motion.li className="flex items-center gap-5 xl:w-max-[5em]" variants={textVariants}>
+                        <motion.li className="flex items-center gap-5" variants={textVariants}>
                             <IoSchool className="text-[#ffa000] xl:text-3xl text-lg" />
                             Graduated SoftUni JavaScript Developer
                         </motion.li>
@@ -111,14 +111,14 @@ export default function Home() {
                         </motion.li>
                     </motion.ul>
                     <motion.h2 className="text-center font-bold self-center">with</motion.h2>
-                    <motion.ul initial="hidden" animate="visible" variants={variants} className="flex w-[480px] xl:max-w-[480px] max-w-[18em] items-center justify-between xl:text-[25px] text-[20px]">
+                    <motion.ul initial="hidden" animate="visible" variants={variants} className="flex w-[480px] xl:max-w-[480px] max-w-[16em] items-center justify-between xl:text-[25px] text-[20px]">
                         {techStack.map((link) => (
                             <motion.li variants={variants}>
                                 {link.icon}
                             </motion.li>
                         ))}
                     </motion.ul>
-                    <motion.div className="flex justify-start gap-5 mt-5" variants={textVariants}>
+                    <motion.div className="flex justify-start gap-5 mt-3" variants={textVariants}>
                         <Link href={"#projects"}>
                             <button className="bg-white text-sm xl:text-lg text-black py-3 px-5 rounded-xl">See All Projects</button>
                         </Link>
@@ -130,15 +130,14 @@ export default function Home() {
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="xl:mb-0 mb-10"
+                    className="xl:mb-0 mb-3"
                 >
                     <Image
-                        // src={"/images/samurai.jpg"}
                         src={"/images/profile.jpg"}
                         alt="my-image"
                         width={300}
                         height={300}
-                        className="shadow-2xl rounded-[50%] xl:h-[400px] h-[180px] xl:w-[400px] w-[180px] my-5 xl:my-0 "
+                        className="shadow-2xl rounded-[50%] xl:h-[400px] h-[150px] xl:w-[400px] w-[150px] my-2 xl:my-0 lg:mr-[4em] sm:mr-0"
                     />
                 </motion.div>
             </div>
