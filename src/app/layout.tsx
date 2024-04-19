@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} text-gray-200`}>
-        <Nav />
+      <body className={`${inter.className} text-gray-200 py-4`}>
+        {/* <Nav /> */}
         {children}
       </body>
     </html>
