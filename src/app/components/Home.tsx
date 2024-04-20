@@ -4,7 +4,7 @@ import Header from "./Header";
 import Image from "next/image";
 import Link from "next/link";
 
-import { animate, motion } from "framer-motion";
+import { animate, easeOut, motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 // Icons
@@ -88,7 +88,7 @@ export default function Home() {
                     <motion.h1 className="text-[1.2em] xl:text-[2em]" variants={textVariants}>
                         Hello, I'am
                     </motion.h1>
-                    <motion.span className="text-[1.2em] xl:text-[2.5em] font-bold" variants={textVariants}>
+                    <motion.span className="text-[1.2em] xl:text-[2.5em] font-bold text-[#6305dc]" variants={textVariants}>
                         {text}
                         <Cursor />
                     </motion.span>
@@ -120,7 +120,7 @@ export default function Home() {
                     </motion.ul>
                     <motion.div className="flex justify-start gap-5 mt-3" variants={textVariants}>
                         <Link href={"#projects"}>
-                            <button className="bg-white text-sm xl:text-lg text-black py-3 px-5 rounded-xl">See All Projects</button>
+                            <button className="bg-[#6305dc] text-sm xl:text-lg text-white py-3 px-5 rounded-xl">See All Projects</button>
                         </Link>
                         <Link href={"#contact"}>
                             <button className="border text-sm xl:text-lg border-gray-200 py-3 px-5 rounded-xl">Contact Me</button>
@@ -128,20 +128,28 @@ export default function Home() {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
                     className="xl:mb-0 mb-3"
+                    initial={{ y: 0 }}
+                    animate={{ y: -15 }}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: "mirror",
+                        duration: 2,
+                        ease: "easeInOut"
+                    }}
                 >
                     <Image
-                        src={"/images/profile.jpg"}
+                        src={"/images/home-image.png"}
                         alt="my-image"
                         width={300}
                         height={300}
-                        className="shadow-2xl rounded-[50%] xl:h-[400px] h-[150px] xl:w-[400px] w-[150px] my-2 xl:my-0 lg:mr-[4em] sm:mr-0"
+                        className="xl:h-full rounded-[50%] h-[150px] xl:w-auto w-[150px] my-2 xl:my-0 lg:mr-[4em] sm:mr-0"
                     />
                 </motion.div>
             </div>
-            <motion.div>
+            <motion.div
+                variants={textVariants}
+                animate="scrollArrow">
                 <FaArrowDown className="text-3xl absolute hidden xl:block bottom-10 right-[50%]" />
             </motion.div>
         </section>

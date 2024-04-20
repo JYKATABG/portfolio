@@ -35,11 +35,11 @@ export default function About() {
     }
 
     return (
-        <section id="about" className="flex flex-col justify-center xl:w-[1366px] m-auto gap-5 xl:px-0 px-5">
+        <section id="about" className="flex flex-col justify-evenly xl:w-[1366px] m-auto xl:px-0 px-5">
             <motion.h1
                 initial={{ opacity: 0, x: 150 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-center xl:text-3xl text-xl font-bold xl:mb-[3em] mb-[0.5em]">
+                className="text-center xl:text-[2.5em] text-2xl font-bold xl:mb-[2em] mb-[2.5em]">
                 ABOUT ME
             </motion.h1>
             <motion.div
@@ -47,7 +47,7 @@ export default function About() {
                 initial="hidden"
                 whileInView="visible"
                 variants={variants}
-                className="xl:text-xl text-[15px] flex flex-col gap-5 pb-3">
+                className="xl:text-2xl text-[14.5px] flex flex-col gap-10 pb-3">
                 <motion.p variants={paragraphVariants}>My coding journey commenced in 2022 when I enrolled in my first course at SoftUni - <span>Programming Basics with JavaScript - march 2022</span></motion.p>
                 <motion.p variants={paragraphVariants}>I've had the opportunity to delve into a variety of exciting new technologies, including React, Angular, Node.js, Express, MongoDB, as well as HTML and CSS.</motion.p>
                 <motion.p variants={paragraphVariants}>I gained valuable knowledge from the instructors and the supportive community they've cultivated.

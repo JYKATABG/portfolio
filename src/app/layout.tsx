@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} text-gray-200 py-4`}>
-        {/* <Nav /> */}
+        <Nav />
         {children}
       </body>
     </html>
