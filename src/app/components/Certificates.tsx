@@ -40,7 +40,7 @@ export default function Certificates() {
     return (
         <>
             <section id="certificates" className="xl:w-[1366px] m-auto flex flex-col justify-center items-center">
-                <h1 className="xl:mb-[6em] mb-[3em] text-3xl font-bold uppercase">Certificates</h1>
+                <h1 className="xl:mb-[6em] mb-[3em] xl:text-[2.5em] text-2xl font-bold uppercase">Certificates</h1>
                 <motion.div
                     className="xl:flex grid xl:flex-row justify-around grid-cols-2 gap-10 w-full px-3" 
                     variants={variantUp}
