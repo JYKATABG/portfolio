@@ -22,6 +22,7 @@ import {
 } from "react-icons/io5";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BiLogoTypescript } from "react-icons/bi";
+import { ReactElement } from "react";
 
 
 export default function Home() {
@@ -34,13 +35,13 @@ export default function Home() {
     })
 
     const techStack = [
-        { icon: <IoLogoHtml5 className="text-[#f06b31]" /> },
-        { icon: <IoLogoCss3 className="text-[#41b4e1]" /> },
-        { icon: <IoLogoJavascript className="text-[#f7e025]" /> },
-        { icon: <BiLogoTypescript className="text-[#007acc]  xl:text-[33px] text-[28px]" /> },
-        { icon: <IoLogoReact className="text-[#66dcfb]" /> },
-        { icon: <TbBrandNextjs className="xl:text-[33px] text-[28px]" /> },
-        { icon: <FaGitAlt className="text-[#f15536] xl:text-[33px] text-[28px]" /> },
+        { id: 0, icon: <IoLogoHtml5 className="text-[#f06b31]" /> },
+        { id: 1, icon: <IoLogoCss3 className="text-[#41b4e1]" /> },
+        { id: 2, icon: <IoLogoJavascript className="text-[#f7e025]" /> },
+        { id: 3, icon: <BiLogoTypescript className="text-[#007acc]  xl:text-[33px] text-[28px]" /> },
+        { id: 4, icon: <IoLogoReact className="text-[#66dcfb]" /> },
+        { id: 5, icon: <TbBrandNextjs className="xl:text-[33px] text-[28px]" /> },
+        { id: 6, icon: <FaGitAlt className="text-[#f15536] xl:text-[33px] text-[28px]" /> },
     ]
 
     const variants = {
@@ -113,7 +114,7 @@ export default function Home() {
                     <motion.h2 className="text-center font-bold self-center">with</motion.h2>
                     <motion.ul initial="hidden" animate="visible" variants={variants} className="flex w-[480px] xl:max-w-[480px] max-w-[16em] items-center justify-between xl:text-[25px] text-[20px]">
                         {techStack.map((link) => (
-                            <motion.li variants={variants}>
+                            <motion.li variants={variants} key={link?.id}>
                                 {link.icon}
                             </motion.li>
                         ))}
@@ -129,7 +130,7 @@ export default function Home() {
                 </motion.div>
                 <motion.div
                     className="xl:mb-0 mb-3"
-                    initial={{ y: 0 }}
+                    initial={{ y: 0, opacity: 0 }}
                     animate={{ y: -15 }}
                     transition={{
                         repeat: Infinity,
@@ -143,7 +144,7 @@ export default function Home() {
                         alt="my-image"
                         width={300}
                         height={300}
-                        className="xl:h-full rounded-[50%] h-[150px] xl:w-auto w-[150px] my-2 xl:my-0 lg:mr-[4em] sm:mr-0"
+                        className="xl:h-full rounded-[50%] h-[150px] xl:w-[350px] w-[150px] my-2 xl:my-0 lg:mr-[4em] sm:mr-0"
                     />
                 </motion.div>
             </div>
