@@ -130,7 +130,8 @@ export default function Home() {
                 </motion.div>
                 <motion.div
                     className="xl:mb-0 mb-3"
-                    initial={{ y: 0, opacity: 0 }}
+                    variants={variants}
+                    initial={{ y: 0 }}
                     animate={{ y: -15 }}
                     transition={{
                         repeat: Infinity,
