@@ -89,8 +89,8 @@ export default function Projects() {
                             // whileHover={{ scale: 1.1, rotateY: 10 }}
                             className="h-full  overflow-hidden">
                             <Image
-                                src={"/images/projects/secondride.png"}
-                                alt="hansa-recipe-app"
+                                src={"/images/projects/secondRide.png"}
+                                alt="second-ride-app"
                                 width={300}
                                 height={300}
                                 className="w-auto h-full cursor-pointer"
